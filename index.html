@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ads</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Montserrat', sans-serif;
+		}
+		.ads{
+			width: 970px;
+			height: 250px;
+			background: #14e6dd;
+			padding: 15px;
+		}
+		.ads__frame{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		.ads__wrapper{
+			position: relative;
+			left: 0;
+			width: auto;
+			display: grid;
+			grid-template-columns: repeat(8, 1fr);
+			height: 100%;
+			grid-gap: 15px;
+			transition: all ease 1000ms;
+		}
+		.ads__item{
+			position: relative;
+			width: 224px;
+			height: 100%;
+		}
+		.ads__item img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.ads__details{
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 40%;
+			background: rgba(255, 255, 255, 0.6);
+			text-align: center;
+			padding-top: 6px;
+		}
+		.ads__details p{
+			margin-bottom: 6px;
+		}
+		.ads__details button{
+			width: 100px;
+		   border: none;
+		   cursor: pointer;
+		   background: #000;
+		   color: #fff;
+		   border-radius: 30px;
+		   padding: 4px;
+		   font-weight: bold;
+		}
+		.price{
+			font-size: 14px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="ads">
+		<div class="ads__frame">
+			<div class="ads__wrapper">
+				<div class="ads__item">
+					<img src="https://ie.sportsdirect.com/images/marketing/sd-running-cats-mob-kids-fw.jpg" alt="">
+					<div class="ads__details">
+						<p class="title"></p>
+						<p class="price"></p>
+						<a href="#">
+							<button>BUY</button>
+						</a>
+					</div>
+				</div>
+				<div class="ads__item">
+					<img src="https://www.brooksrunning.com/dw/image/v2/aaev_prd/on/demandware.static/-/Sites-BrooksCatalog/default/dwd47c4867/images/ProductImages/120277/120277_495_l_WR.jpg?sw=900" alt="">
+					<div class="ads__details">
+						<p class="title"></p>
+						<p class="price"></p>
+						<a href="#">
+							<button>BUY</button>
+						</a>
+					</div>
+				</div>
+				<div class="ads__item">
+					<img src="https://www.samuel-windsor.co.uk/images/products/p-BV303-.jpg" alt="">
+					<div class="ads__details">
+						<p class="title"></p>
+						<p class="price"></p>
+						<a href="#">
+							<button>BUY</button>
+						</a>
+					</div>
+				</div>
+				<div class="ads__item">
+					<img src="https://embed.widencdn.net/img/redwing/nmowljphn5/640x640px/RW00133C_MUL_N1_0115.jpeg?position=s&crop=no&color=efece0&quality=75&u=lkbof4" alt="">
+					<div class="ads__details">
+						<p class="title"></p>
+						<p class="price"></p>
+						<a href="#">
+							<button>BUY</button>
+						</a>
+					</div>
+				</div>
+				<div class="ads__item">
+					<img src="https://www.next.co.uk/nxtcms/resource/image/550552/portrait_ratio1x1/525/525/e05055250b286dfbc9cf433f2dfca074/En/heels.jpg" alt="">
+					<div class="ads__details">
+						<p class="title"></p>
+						<p class="price"></p>
+						<a href="#">
+							<button>BUY</button>
+						</a>
+					</div>
+				</div>
+				<div class="ads__item">
+					<img src="https://cdn.vox-cdn.com/thumbor/stj-_YvIqKifK7ErwSY-DV7jlLQ=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/13681416/fshivakumar_181109_3078_0001.jpg" alt="">
+					<div class="ads__details">
+						<p class="title"></p>
+						<p class="price"></p>
+						<a href="#">
+							<button>BUY</button>
+						</a>
+					</div>
+				</div>
+				<div class="ads__item">
+					<img src="https://www.popsci.com/sites/popsci.com/files/styles/1000_1x_/public/nikeshoes.jpg?itok=02WltYu-" alt="">
+					<div class="ads__details">
+						<p class="title"></p>
+						<p class="price"></p>
+						<a href="#">
+							<button>BUY</button>
+						</a>
+					</div>
+				</div>
+				<div class="ads__item">
+					<img src="https://www.florsheim.com/shop/resources/images/index/index2.jpg" alt="">
+					<div class="ads__details">
+						<p class="title"></p>
+						<p class="price"></p>
+						<a href="#">
+							<button>BUY</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		//ADS SWIPE
+		let adsWrapper = document.querySelector('.ads__wrapper')
+		let adsItemStart = 0;
+		adsWrapper.onmousedown = (e)=>{
+			e = e || window.event;
+			e.preventDefault()
+			let startPosition = e.clientX;
+			let mouseMovement = 0;
+			let mouseDistance = 0;
+			document.onmousemove = (e)=>{
+				e = e || window.event;
+				e.preventDefault()
+				mouseMovement = e.clientX;
+				mouseDistance = startPosition - mouseMovement;
+
+				//swipe left
+				if(mouseDistance > 10){
+					document.onmousemove = null;
+					if(adsItemStart == -239*4){
+						adsItemStart = -239*4;
+					}else{
+						adsItemStart = adsItemStart + (-239);
+					}
+					adsWrapper.style.left = `${adsItemStart}px`;
+					
+				}
+
+				//swipe right
+				if(mouseDistance < -10){
+					document.onmousemove = null;
+					if(adsItemStart == 0){
+						adsItemStart = 0;
+					}else{
+						adsItemStart = adsItemStart + 239;
+					}
+					adsWrapper.style.left = `${adsItemStart}px`;
+				}
+
+
+				document.onmouseup = ()=>{
+					document.onmouseup = null;
+					document.onmousemove = null;
+				}
+			}
+			document.onmouseup = ()=>{
+				document.onmouseup = null;
+				document.onmousemove = null;
+			}
+		}
+
+
+	//JSON CALL
+	let callJson = async function(){
+		let fetchData = await fetch('https://armanrozika.github.io/adzymicjson/adsdetails.json');
+		let fetchResp = await fetchData.json();
+
+		let adsTitle = document.querySelectorAll('.title');
+		let adsPrice = document.querySelectorAll('.price');
+
+		for(let i=0; i<adsTitle.length; i++){
+			adsTitle[i].innerText = fetchResp.adsdetails[i].title;
+			adsPrice[i].innerText = 'USD ' + fetchResp.adsdetails[i].price;
+		}
+		
+	}
+
+	callJson()
+
+	</script>
+</body>
+</html>
