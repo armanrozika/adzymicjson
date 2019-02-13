@@ -1,0 +1,37 @@
+{
+	"adsdetails": [
+		{
+			"title" : "Nike Shoes",
+			"price" : 178
+		},
+		{
+			"title" : "Best Shoes",
+			"price" : 160
+		},
+		{
+			"title" : "Good Shoes",
+			"price" : 177
+		},
+		{
+			"title" : "React Shoes",
+			"price" : 90
+		},
+		{
+			"title" : "Air Shoes",
+			"price" : 100
+		},
+		{
+			"title" : "Pretty Shoes",
+			"price" : 165
+		},
+		{
+			"title" : "Awesome Shoes",
+			"price" : 170
+		},
+		{
+			"title" : "This Shoes",
+			"price" : 200
+		},
+
+	]
+}
