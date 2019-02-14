@@ -50,6 +50,7 @@
 			position: relative;
 			width: 149px;
 			height: 90%;
+			cursor: pointer;
 		}
 		.ads__item img{
 			width: 100%;
@@ -85,8 +86,22 @@
 
 		.ads__right{
 			width: 670px;
+			position: relative;
 			height: 100%;
 			overflow: hidden;
+		}
+
+		.swipe__left, .swipe__right{
+			width: 30px;
+			height: 100%;
+			position: absolute;
+			top:0;
+			left: 0;
+			background: rgba(0,0,0,0.4)
+		}
+		.swipe__right{
+			left: auto;
+			right: 0;
 		}
 	</style>
 </head>
@@ -178,7 +193,10 @@
 								</a>
 							</div>
 						</div>
+						
 			</div>
+			<div class="swipe__left"></div>
+			<div class="swipe__right"></div>
 		</div>
 		
 	</div>
@@ -235,6 +253,29 @@
 			}
 		}
 
+//Mouse Over Swipe
+	let swipeLeft = document.querySelector('.swipe__left');
+	let swipeRight = document.querySelector('.swipe__right');
+
+	function moveLeft(){
+		if(adsItemStart == -165*4){
+			adsItemStart = -165*4;
+		}else{
+			adsItemStart = adsItemStart + (-165);
+		}
+		adsWrapper.style.left = `${adsItemStart}px`;
+	}
+	function moveRight(){
+		if(adsItemStart == 0){
+			adsItemStart = 0;
+		}else{
+			adsItemStart = adsItemStart + 165;
+		}
+		adsWrapper.style.left = `${adsItemStart}px`;
+	}
+
+	swipeLeft.addEventListener('mouseover', moveLeft);
+	swipeRight.addEventListener('mouseover', moveRight)
 
 	//JSON CALL
 	let callJson = async function(){
