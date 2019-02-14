@@ -1,35 +1,35 @@
 {
 	"adsdetails": [
 		{
-			"title" : "Nike Shoes",
+			"title" : "Pretty Sweater",
 			"price" : 178
 		},
 		{
-			"title" : "Best Shoes",
+			"title" : "Best Sweater",
 			"price" : 160
 		},
 		{
-			"title" : "Good Shoes",
+			"title" : "Good Sweater",
 			"price" : 177
 		},
 		{
-			"title" : "React Shoes",
+			"title" : "React Sweater",
 			"price" : 90
 		},
 		{
-			"title" : "Air Shoes",
+			"title" : "Air Sweater",
 			"price" : 100
 		},
 		{
-			"title" : "Pretty Shoes",
+			"title" : "Pretty Sweater",
 			"price" : 165
 		},
 		{
-			"title" : "Awesome Shoes",
+			"title" : "Awesome Sweater",
 			"price" : 170
 		},
 		{
-			"title" : "This Shoes",
+			"title" : "This Sweater",
 			"price" : 200
 		}
 

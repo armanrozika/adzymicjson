@@ -8,15 +8,27 @@
 		*{
 			margin: 0;
 			padding: 0;
-			box-sizing: border-box;
 			font-family: 'Montserrat', sans-serif;
 		}
 		.ads{
 			width: 970px;
 			height: 250px;
-			background: #14e6dd;
-			padding: 15px;
+			background: #fff;
+			border: 1px grey dashed;
+			display: flex;
 		}
+
+		.ads__left{
+			width: 300px;
+			height: 250px;
+		}
+
+		 .ads__left img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		
 		.ads__frame{
 			width: 100%;
 			height: 100%;
@@ -31,11 +43,13 @@
 			height: 100%;
 			grid-gap: 15px;
 			transition: all ease 1000ms;
+			align-items: center;
+    		margin-left: 15px;
 		}
 		.ads__item{
 			position: relative;
-			width: 224px;
-			height: 100%;
+			width: 149px;
+			height: 90%;
 		}
 		.ads__item img{
 			width: 100%;
@@ -67,96 +81,106 @@
 		.price{
 			font-size: 14px;
 			font-weight: bold;
+		} 
+
+		.ads__right{
+			width: 670px;
+			height: 100%;
+			overflow: hidden;
 		}
 	</style>
 </head>
 
 <body>
 	<div class="ads">
-		<div class="ads__frame">
-			<div class="ads__wrapper">
-				<div class="ads__item">
-					<img src="https://ie.sportsdirect.com/images/marketing/sd-running-cats-mob-kids-fw.jpg" alt="">
-					<div class="ads__details">
-						<p class="title"></p>
-						<p class="price"></p>
-						<a href="#">
-							<button>BUY</button>
-						</a>
-					</div>
-				</div>
-				<div class="ads__item">
-					<img src="https://www.brooksrunning.com/dw/image/v2/aaev_prd/on/demandware.static/-/Sites-BrooksCatalog/default/dwd47c4867/images/ProductImages/120277/120277_495_l_WR.jpg?sw=900" alt="">
-					<div class="ads__details">
-						<p class="title"></p>
-						<p class="price"></p>
-						<a href="#">
-							<button>BUY</button>
-						</a>
-					</div>
-				</div>
-				<div class="ads__item">
-					<img src="https://www.samuel-windsor.co.uk/images/products/p-BV303-.jpg" alt="">
-					<div class="ads__details">
-						<p class="title"></p>
-						<p class="price"></p>
-						<a href="#">
-							<button>BUY</button>
-						</a>
-					</div>
-				</div>
-				<div class="ads__item">
-					<img src="https://embed.widencdn.net/img/redwing/nmowljphn5/640x640px/RW00133C_MUL_N1_0115.jpeg?position=s&crop=no&color=efece0&quality=75&u=lkbof4" alt="">
-					<div class="ads__details">
-						<p class="title"></p>
-						<p class="price"></p>
-						<a href="#">
-							<button>BUY</button>
-						</a>
-					</div>
-				</div>
-				<div class="ads__item">
-					<img src="https://www.next.co.uk/nxtcms/resource/image/550552/portrait_ratio1x1/525/525/e05055250b286dfbc9cf433f2dfca074/En/heels.jpg" alt="">
-					<div class="ads__details">
-						<p class="title"></p>
-						<p class="price"></p>
-						<a href="#">
-							<button>BUY</button>
-						</a>
-					</div>
-				</div>
-				<div class="ads__item">
-					<img src="https://cdn.vox-cdn.com/thumbor/stj-_YvIqKifK7ErwSY-DV7jlLQ=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/13681416/fshivakumar_181109_3078_0001.jpg" alt="">
-					<div class="ads__details">
-						<p class="title"></p>
-						<p class="price"></p>
-						<a href="#">
-							<button>BUY</button>
-						</a>
-					</div>
-				</div>
-				<div class="ads__item">
-					<img src="https://www.popsci.com/sites/popsci.com/files/styles/1000_1x_/public/nikeshoes.jpg?itok=02WltYu-" alt="">
-					<div class="ads__details">
-						<p class="title"></p>
-						<p class="price"></p>
-						<a href="#">
-							<button>BUY</button>
-						</a>
-					</div>
-				</div>
-				<div class="ads__item">
-					<img src="https://www.florsheim.com/shop/resources/images/index/index2.jpg" alt="">
-					<div class="ads__details">
-						<p class="title"></p>
-						<p class="price"></p>
-						<a href="#">
-							<button>BUY</button>
-						</a>
-					</div>
-				</div>
+		<div class="ads__left">
+			<img src="https://laurenconrad.com/wp-content/uploads/2018/02/DIY-Embroidery-20.jpg" alt="">
+		</div>
+		<div class="ads__right">
+				<div class="ads__wrapper">
+						<div class="ads__item">
+							<img src="https://photo.venus.com/im/Y77513-WH_J71021-DW_Y72944-WH.061.jpg?preset=product" alt="">
+							<div class="ads__details">
+								<p class="title"></p>
+								<p class="price"></p>
+								<a href="#">
+									<button>BUY</button>
+								</a>
+							</div>
+						</div>
+						<div class="ads__item">
+							<img src="https://cdn.shopify.com/s/files/1/0269/2921/products/madisonweb-20180809102210.jpg?v=1534632192" alt="">
+							<div class="ads__details">
+								<p class="title"></p>
+								<p class="price"></p>
+								<a href="#">
+									<button>BUY</button>
+								</a>
+							</div>
+						</div>
+						<div class="ads__item">
+							<img src="http://assets.myntassets.com/assets/images/7776877/2018/11/29/0a143847-e839-4203-981b-bfc1ca4169161543470389063-ONLY-Women-Sweaters-9471543470388195-1.jpg" alt="">
+							<div class="ads__details">
+								<p class="title"></p>
+								<p class="price"></p>
+								<a href="#">
+									<button>BUY</button>
+								</a>
+							</div>
+						</div>
+						<div class="ads__item">
+							<img src="https://www.mumshandmade.com/images/products/product-381-image-767-oym9W.jpg" alt="">
+							<div class="ads__details">
+								<p class="title"></p>
+								<p class="price"></p>
+								<a href="#">
+									<button>BUY</button>
+								</a>
+							</div>
+						</div>
+						<div class="ads__item">
+							<img src="https://www.lulus.com/images/product/xlarge/3098710_393822.jpg" alt="">
+							<div class="ads__details">
+								<p class="title"></p>
+								<p class="price"></p>
+								<a href="#">
+									<button>BUY</button>
+								</a>
+							</div>
+						</div>
+						<div class="ads__item">
+							<img src="https://www.chicos.com/Product_Images/570251538_4626.jpg?resize=300px:*" alt="">
+							<div class="ads__details">
+								<p class="title"></p>
+								<p class="price"></p>
+								<a href="#">
+									<button>BUY</button>
+								</a>
+							</div>
+						</div>
+						<div class="ads__item">
+							<img src="https://aritzia.scene7.com/is/image/Aritzia/medium/f18_04_a03_69075_15730_on_a.jpg" alt="">
+							<div class="ads__details">
+								<p class="title"></p>
+								<p class="price"></p>
+								<a href="#">
+									<button>BUY</button>
+								</a>
+							</div>
+						</div>
+						<div class="ads__item">
+							<img src="https://aritzia.scene7.com/is/image/Aritzia/medium/f18_04_a03_68883_14165_on_a.jpg" alt="">
+							<div class="ads__details">
+								<p class="title"></p>
+								<p class="price"></p>
+								<a href="#">
+									<button>BUY</button>
+								</a>
+							</div>
+						</div>
 			</div>
 		</div>
+		
 	</div>
 
 
@@ -179,10 +203,10 @@
 				//swipe left
 				if(mouseDistance > 10){
 					document.onmousemove = null;
-					if(adsItemStart == -239*4){
-						adsItemStart = -239*4;
+					if(adsItemStart == -165*4){
+						adsItemStart = -165*4;
 					}else{
-						adsItemStart = adsItemStart + (-239);
+						adsItemStart = adsItemStart + (-165);
 					}
 					adsWrapper.style.left = `${adsItemStart}px`;
 					
@@ -194,7 +218,7 @@
 					if(adsItemStart == 0){
 						adsItemStart = 0;
 					}else{
-						adsItemStart = adsItemStart + 239;
+						adsItemStart = adsItemStart + 165;
 					}
 					adsWrapper.style.left = `${adsItemStart}px`;
 				}
